@@ -1,0 +1,80 @@
+<html>
+<head>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+        .pagetext { 
+            position: relative;
+            display: block;
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 30px;
+            font-weight: 400;
+            padding-bottom: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            position: absolute;
+            text-align: center;
+            font-size: large;
+            font-weight: 300;
+        }
+        .text {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            text-align: left;
+        }  
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href = "Assignment2.css">
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active"> Malden to College </a>
+        <a href="OurServices.html">Our Services</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class = "footer" >
+        <p class = "pfooter"> <p> Malden to College | 123 Strawberry Lane, Malden MA 123456 
+            | (123)-456-7890 | office@MaldenToCollege.org </p>
+    </div> 
+    <img src = "graduation.jpg">
+    <h2> Dedicated to first generation success </h2>
+    <article>
+        <section>
+            <p class = "pagetext"> At Malden to College (M2C), our mission is to provide 
+                first-generation students with the tools and knowledge to prepare
+                themselves and their families for their journey and completion
+                of a 4-year undergraduate program at a college or university. 
+            <br>
+                Since 2009, we have been providing year-round college readiness services 
+                to students from 9th grade through college graduation.
+            </p>
+        </section>
+    </article>
+
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
+
+</body>
+</html>

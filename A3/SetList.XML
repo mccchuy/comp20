@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type = "text/css" href = "SetList.css"?>
+<set-list>
+    <banner> Set List </banner>
+    <song>
+        <title> Song Title: In Da Club </title>
+        <genre> Genre: Rap </genre>
+        <artist> Artist: 50 Cent </artist>
+        <release-year> Release Year: 2003 </release-year>
+    </song>
+    <song>
+        <title> Song Title: Get Money </title>
+        <genre> Genre: Rap </genre>
+        <artist> Artist: Junior M.A.F.I.A </artist>
+        <release-year> Release Year: 1995 </release-year>
+    </song>
+    <song>
+        <title> Song Title: Lost </title>
+        <genre> Genre: Rap </genre>
+        <artist> Artists: T-Dre, Delux, Cali Life Style </artist> 
+        <release-year> Release Year: 1996 </release-year>
+    </song>
+    <song>
+        <title> Song Title: What's Going On </title>
+        <genre> Genre: Soul/R&amp;B </genre>
+        <artist> Artist: Marvin Gaye </artist>
+        <release-year> Release Year: 1971 </release-year>
+    </song>
+    <song>
+        <title> Song Title: Crusin' </title>
+        <genre> Genre: Soul/R&amp;B </genre>
+        <artist> Artist: D'Angelo </artist>
+        <release-year> Release Year: 1995 </release-year>
+    </song>
+    <song>
+        <title> Song Title: Soul Sista </title>
+        <genre> Genre: Soul/R&amp;B </genre>
+        <artist> Artist: Bilal </artist>
+        <release-year> Release Year: 2000 </release-year>
+    </song> 
+    <song>
+        <title> Song Title: I Wanna Get Next To You </title>
+        <genre> Genre: Soul/R&amp;B </genre>
+        <artist> Artist: Rose Royce </artist>
+        <release-year> Release Year: 1976 </release-year>
+    </song>
+    <song>
+        <title> Song Title: La Camisa Negra </title>
+        <genre> Genre: Rock </genre>
+        <artist> Artist: Juanes </artist>
+        <release-year> Release Year: 2005 </release-year>
+    </song>
+    <song>
+        <title> Song Title: Dominicana </title>
+        <genre> Genre: Rap </genre>
+        <artist> Artist: Chucky73 </artist>
+        <release-year> Release Year: 2020 </release-year>
+    </song>
+    <song>
+        <title> Song Title: Te Quiero Igual Que Ayer </title>
+        <genre> Genre: Bachata </genre>
+        <artist> Artist: Monchy &amp; Alexandra </artist>
+        <release-year> Release Year: 2002 </release-year>
+    </song>
+</set-list>

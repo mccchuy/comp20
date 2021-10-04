@@ -1,0 +1,27 @@
+set-list {
+    color: darkgreen;
+    background-color: rgb(214, 253, 238);
+    /*width: 100%;*/
+}
+
+banner {
+    color: teal;
+    font-size: 100px;
+    width: max-content;
+}
+
+song {
+    display: block;
+    color:midnightblue;
+    font-size: 20px;
+}
+
+title {
+    color: black;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+genre, artist, release-year {
+    display: block;
+}

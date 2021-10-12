@@ -26,6 +26,6 @@ tax = subTotal * 0.0625;
 totalWithTax = subTotal + tax;
 
 document.getElementById("itemsordered").innerHTML = parseFloat(numHotDogs) + parseFloat(numFries) + parseFloat(numDrinks);
-document.getElementById("quantity").innerHTML = "Hot Dogs: " + (numHotDogs) + " Fries: " + (numFries) + (" Drinks: ") + (numDrinks);
+document.getElementById("quantity").innerHTML = "Hot Dogs: " + (numHotDogs) + ", Fries: " + (numFries) + (", Drinks: ") + (numDrinks);
 document.getElementById("tax").innerHTML = "$" + tax.toFixed(2);
 document.getElementById("total").innerHTML = "$" + totalWithTax.toFixed(2);

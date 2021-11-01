@@ -1,4 +1,4 @@
-{"songs": [
+[
     {"title": "In Da Club", "genre": "Rap", "artist": "50 Cent", "release-year": "2003"},
     {"title": "Get Money", "genre": "Rap", "artist": "Junior M.A.F.I.A", "release-year": "1995"},  
     {"title": "Lost", "genre": "Rap", "artist": "T-Dre, Delux, Cali Life Style", "release-year": "1996"},
@@ -9,5 +9,4 @@
     {"title": "Dominicana", "genre": "Rap", "artist": "Chucky73", "release-year": "2020"},
     {"title": "Te Quiero Igual Que Ayer", "genre": "Soul/R&B", "artist": "D'Angelo", "release-year": "2002"},
     {"title": "La Camisa Negra", "genre": "Bachata", "artist": "Monchy & Alexandra", "release-year": "2005"}
-]}
-
+]

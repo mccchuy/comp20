@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment 8</title>
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<!--script language="javascript" src="animals.json"></script-->
+	
+
+</head>
+
+    <body>
+    
+    <div id = "pt1"></div>
+    <div id = "pt2"></div>
+    <div id="dropdown"></div>
+    <div id = "results"></div>
+	<script language="javascript">
+    
+    var genres = [];
+    var songs = [];
+    // Part 2
+
+
+        $(document).ready(function() {
+            $.get( "https://mccchuy.github.io/comp20/A8/songs.json", 
+		  function(data) {
+            songs = data;
+			str = JSON.stringify(data);
+            document.getElementById("pt1").innerHTML = "Part 1: <br/>"
+            document.getElementById("pt1").innerHTML += str;
+            
+            // Pt 3
+            document.getElementById("pt2").innerHTML = "Part 2: <br/>"
+            strHTML = "<ul>";
+            data.forEach(function(songs) {
+                strHTML += "<br/>"
+
+                + songs.title + "<br/>"
+                + "Artists(s): " + songs.artist + "<br/>"
+                + "Genre: " + songs.genre + "<br/>"
+                + "Released: " + songs.year + "<br/>";
+
+                if (!genres.includes(songs.genre)) {
+                    genres.push(songs["genre"]);
+                }
+
+                //genres.push(songs.genre);
+            });
+            document.getElementById("pt2").innerHTML += strHTML
+
+            function makeSelect(genres)
+            {
+                var t= "<select>";
+                for (j=0; j<genres.length; j++)
+                t += "<option>" + genres[j] + "</option>";
+                t+= "</select>"; 
+                return t;
+            }
+            document.getElementById("dropdown").innerHTML = makeSelect(genres);
+
+            $("select").change(function() {
+                results = [];
+                var selectedGenre = $('select option').filter(":selected").val();
+                for (i = 0; i<songs.length; i++) {
+                   if (songs[i].genre == selectedGenre) {
+                       results.push(songs[i].title);
+                   }
+                }
+
+                document.getElementById("results").innerHTML = results;
+
+            });
+        });
+	});
+
+    </script>
+    </body>
+</html>
+
+

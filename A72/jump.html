@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Joe's Hotdogs Order Form</title>
+		<!-- include jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.js" 
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+		crossorigin="anonymous"></script>
+
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            .row {
+                width: 900px;
+                margin: 0 auto;
+            }
+
+            .col {
+                float: left;
+                width: 200px;
+                margin: 10px;
+
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            input[type=text], input{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+        </style>
+    </head>
+
+    <h1> Jump! </h1>
+    <form name="jumpForm" >
+        <div class = "row">
+            <div class = "col" name = "left">
+                <input type="text" id="leftTxt" name="leftTxt" value = "abc">
+            </div>
+
+            <div class = "col" name = "jump">
+                <input name = "middle" id = "middle" type="submit" value="jump >" onclick="return jump(event)"> 
+            </div>
+
+            <div class = "col" name = "right">
+                <input type="text" id="rightTxt" name="rightTxt">
+            </div>
+        </div>
+
+    </form>
+
+        <script type="text/javascript" src = "jump.js"> </script>
+    </body> 
+</html>

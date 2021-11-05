@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Checkbox</title>
+		<!-- include jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.js" 
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+		crossorigin="anonymous"></script>
+    </head>
+
+    <h1> Checkbox </h1>
+    <form name="checkbox">
+        <input type = "checkbox" name = "c1" value = "checkAll" onClick="checkAll(this)">Check All<br/>
+        <input type = "checkbox" name = "c2" value = "pink">pink<br/>
+        <input type = "checkbox" name = "c3" value = "mint">mint<br/>
+        <input type = "checkbox" name = "c4" value = "aqua">aqua<br/>
+        <input type = "checkbox" name = "c5" value = "sage">sage<br/>
+        <input type = "checkbox" name = "c" value = "silver">silver<br/>
+    </form>
+
+        <script type="text/javascript"> 
+
+        function checkAll(source) {
+            box = $('input[name^= "c"]');
+            for (i = 0; i < box.length; i++) {
+                box[i].checked = source.checked;
+            }
+        }
+        </script>
+    </body> 
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Joe's Hotdogs Order Form</title>
+		<!-- include jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.js" 
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+		crossorigin="anonymous"></script>
+        <style>
+            select[id=quantity], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+
+            label {
+                padding: 12px 12px 12px 0;
+                display: inline-block;
+            }
+
+            .foodAndPrice{
+                float: left;
+                width: 25%;
+                margin-top: 6px;
+            }
+
+            .dropdownQ {
+                float: left;
+                width: 75%;
+                margin-top: 6px;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .item, .quan, .total{
+                float: left;
+                width: 30%;
+            }
+
+
+            .totals {
+                clear: left;
+                margin-top: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Joe's Hotdogs Order Form</h1>
+
+        <form name = "orderForm" onsubmit="return validate(event)">
+            <div class = "row">
+                <div class = "foodAndPrice">
+                    <label for = "quantity"> Hotdogs - $3.75</label>
+                </div>
+                <div class = "dropdownQ">
+                    <select id="quantity1" name="quantity1"> 
+                        <option id = "emptyQuan" value=""  disabled selected="selected">Choose a quantity</option>
+                        <option value="1" name="1">1</option>
+                        <option value="2" name = "2">2</option>
+                        <option value="3" name = "3">3</option>
+                        <option value="4" name = "4">4</option>
+                        <option value="5" name = "5">5</option>
+                        <option value="10" name = "10">10</option>
+                        <option value="15" name = "15">15</option>
+                        <option value="20" name = "20">20</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "foodAndPrice">
+                    <label for = "quantity"> French Fries - $2.00</label>
+                </div>
+                <div class = "dropdownQ">
+                    <select id="quantity2" name="quantity2"> 
+                        <option id = "emptyQuan" value=""  disabled selected="selected">Choose a quantity</option>
+                        <option value="1" name="1">1</option>
+                        <option value="2" name = "2">2</option>
+                        <option value="3" name = "3">3</option>
+                        <option value="4" name = "4">4</option>
+                        <option value="5" name = "5">5</option>
+                        <option value="10" name = "10">10</option>
+                        <option value="15" name = "15">15</option>
+                        <option value="20" name = "20">20</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "foodAndPrice">
+                    <label for = "quantity"> Drinks - $1.50</label>
+                </div>
+                <div class = "dropdownQ">
+                    <select id="quantity3" name="quantity3"> 
+                        <option id = "emptyQuan" value=""  disabled selected="selected">Choose a quantity</option>
+                        <option value="1" name="1">1</option>
+                        <option value="2" name = "2">2</option>
+                        <option value="3" name = "3">3</option>
+                        <option value="4" name = "4">4</option>
+                        <option value="5" name = "5">5</option>
+                        <option value="10" name = "10">10</option>
+                        <option value="15" name = "15">15</option>
+                        <option value="20" name = "20">20</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "row">
+                <input type = "submit" value = "Submit">
+            </div>
+        </form>
+
+
+ 
+        <div class = "totals">
+            <div class = wrapper>
+                <div class = "item" id = "item1"> Hotdogs: $3.75 x </div>
+                <div class = "quan" id = "quan1">0</div>
+                <div class = "total" id = "total1">= 0</div>
+            </div>
+
+            <div class = wrapper>
+                <div class = "item" id = "item2"> French Fries: $2.00 x </div>
+                <div class = "quan" id = "quan2">0</div>
+                <div class = "total" id = "total2"> = 0</div>
+            </div>
+
+            <div class = wrapper>
+                <div class = "item" id = "item3"> Drinks: $1.50 x </div>
+                <div class = "quan" id = "quan3">0</div>
+                <div class = "total" id = "total3"> = 0</div>
+            </div>
+        </div>
+
+        <div id = "fullTotal" style = "margin-top: 100px;">Total = $0</div>
+
+        <script type="text/javascript" src = "jHotdogs.js"> </script>
+    </body> 
+</html>

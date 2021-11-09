@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<title>API Fun</title>
+	<meta charset="utf-8"/>
+	<script>
+		function loadMessages() {
+			/* Step 1: Make instance of XHR object...
+			...to make HTTP request after page is loaded*/
+			request = new XMLHttpRequest();
+			console.log("1: created request");
+ 
+		// Step 2: Open the JSON file at remote location
+ 
+			request.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Waukegan&appid=43db44a34c691c120f225b40feeef657", true);
+
+			console.log("2: open success");
+ 	
+			// Step 3: set up callback for when HTTP response is returned (i.e., you get the JSON file back)
+
+			request.onreadystatechange = function() {
+				console.log("3:  event fired");
+			
+ 
+				if (request.readyState == 4 && request.status == 200) {
+
+					// Step 5: when we get all the JSON data back, parse it and use it
+					console.log("5:  data is ready");
+					theData = request.responseText;
+					returnHTML = theData;
+					data = JSON.parse(theData);
+					
+					returnHTML += "<br>"+
+						data["description"];
+
+					document.getElementById("messages").innerHTML =returnHTML;
+				}
+				else if (request.readyState == 4 && request.status != 200) {
+
+					document.getElementById("messages").innerHTML = "Whoops, something went terribly wrong!";
+
+				}
+
+				else if (request.readyState == 3) {
+
+					console.log("6:  ready state 3- request received,data being sent");
+					document.getElementById("messages").innerHTML = "Come back soon!";
+
+				}
+
+			}//end on readystate change
+	
+		// Step 4: fire off the HTTP request
+			request.send();
+			console.log("4 request sent");
+		}
+	</script>
+</head>
+
+
+<body onload="loadMessages()">
+
+	<h1>Welcome to API Fun!</h1>
+	<div id="messages">Loading...</div>
+    <div id = "Questions">
+        <p> 1. I selected the Current Weather Data Api from the Open Weather Map APIS. <br>
+            This API gets the current weather data for a given city globally.</p> <br>
+        <p> 2. I found this API on "https://openweathermap.org/current". </p> <br>
+        <p> 3. I based the options for the API request for my hometown, Waukegan. The appid <br>
+        was assigned by the API and is 43db44a34c691c120f225b40feeef657 </p> <br>
+        <p>
+            4. This API would be useful for: <br>
+            a. Creating an app to tell you the weather of a given city on that day <br>
+            b. Creating a database of extreme weather conditions over the past X years in a given city
+        </p>
+
+    </div>
+</body>
+</html>

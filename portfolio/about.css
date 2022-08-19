@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+nav {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    margin-bottom: 30px;
+    transition: 0.6s; 
+}
+
+nav.sticky {
+    background: white (75%);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+nav .brand {
+    color:#61210F;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .menu a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 30px;
+    color: #B16651;
+    transition: 0.3s;
+}
+
+
+nav .menu a:hover {
+    border-bottom: #61210F 2px solid;
+}
+
+nav .btn {
+    color:#B16651;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+nav .btn:hover {
+    color: #61210F ;
+}
+
+@media (max-width: 1060px) {
+    nav .btn {
+        display: block;
+    }
+
+    nav .menu {
+        position: fixed;
+        background:white;
+        flex-direction: column;
+        min-width: 100%;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+
+    nav .menu.active {
+        right: 0;
+    }
+
+    nav .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+    }
+    
+}
+.section-main {
+    padding-top: 15vh;
+    width: 100%;
+}
+/*content*/
+
+.main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col1, .col2 {
+    float: left;
+    width: 50%;
+}
+
+.col1 img {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+    background-color: #B16651;
+    padding: 50px;
+    margin-left: 100px;
+} 
+.about-text {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.about-text h2{
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #61210F;
+
+}
+
+.about-text h5 {
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: 1.2;
+    margin: 15px 0 15px;
+}
+
+.about-text p {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 60%;
+    line-height: 1.3;
+}
+
+.about-text button{
+        margin-top: 20px;
+        color: #2A9D8F; 
+        background-color: transparent;
+        border: 2px solid #2A9D8F;
+        padding: 12px 32px;
+        line-height: 1.1;
+        font-size: 15px;
+        cursor: pointer;
+}
+
+.about-text button:hover {
+    color: white;
+    background-color: #2A9D8F;
+    border: 2px solid #2A9D8F;
+    transition: .3s;
+}
+
+
+
+ .connect {
+    margin-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.connect p {
+    font-size: 15px;
+    margin-right: 60px;
+    color: #61210F;
+    /* position: relative; */
+}
+
+.connect .links {
+    /* position: absolute; */
+    margin-left: -50px;
+}
+.connect .links a{
+    display: inline-block;
+    color:#61210F;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.connect .links a:hover {
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+@media screen and (max-width: 1200px) {
+    .col1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: -50px;
+    }
+    /*can't center properly*/
+     .col2 {
+        width: 100%;
+        margin-left: 23vw;
+        width: 450px;
+        max-width: 100%;
+
+    } 
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .col2 {
+        width: 100%;
+        margin-left: 10vw;
+        width: 450px;
+    } 
+
+}
